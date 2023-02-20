@@ -12,6 +12,10 @@ jobs:
         with:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-      - uses: codfish/semantic-release-action@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
