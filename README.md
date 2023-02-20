@@ -37,5 +37,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_interface_id"></a> [interface\_id](#output\_interface\_id) | n/a |
+| <a name="output_interface_public_key"></a> [interface\_public\_key](#output\_interface\_public\_key) | n/a |
 <!-- END_TF_DOCS -->
