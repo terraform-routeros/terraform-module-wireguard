@@ -7,6 +7,11 @@ jobs:
   release:
     runs-on: "ubuntu-latest"
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
       - uses: codfish/semantic-release-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
